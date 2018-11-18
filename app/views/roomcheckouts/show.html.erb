@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dayrco:</strong>
+  <%= @roomcheckout.dayRco %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @roomcheckout.note %>
+</p>
+
+<p>
+  <strong>Guest:</strong>
+  <%= @roomcheckout.guest %>
+</p>
+
+<%= link_to 'Edit', edit_roomcheckout_path(@roomcheckout) %> |
+<%= link_to 'Back', roomcheckouts_path %>

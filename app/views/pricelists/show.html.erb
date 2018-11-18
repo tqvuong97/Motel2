@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @pricelist.price %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @pricelist.area %>
+</p>
+
+<%= link_to 'Edit', edit_pricelist_path(@pricelist) %> |
+<%= link_to 'Back', pricelists_path %>

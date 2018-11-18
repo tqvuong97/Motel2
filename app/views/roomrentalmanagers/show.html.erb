@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dayrent:</strong>
+  <%= @roomrentalmanager.dayRent %>
+</p>
+
+<p>
+  <strong>Statusrent:</strong>
+  <%= @roomrentalmanager.statusRent %>
+</p>
+
+<p>
+  <strong>Deposit:</strong>
+  <%= @roomrentalmanager.deposit %>
+</p>
+
+<p>
+  <strong>Guest:</strong>
+  <%= @roomrentalmanager.guest %>
+</p>
+
+<%= link_to 'Edit', edit_roomrentalmanager_path(@roomrentalmanager) %> |
+<%= link_to 'Back', roomrentalmanagers_path %>

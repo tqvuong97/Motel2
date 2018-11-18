@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nameRoom: MyString
+  maxSlot: 1
+  statusRoom: MyString
+  numOfPeople: 1
+  area: one
+
+two:
+  nameRoom: MyString
+  maxSlot: 1
+  statusRoom: MyString
+  numOfPeople: 1
+  area: two

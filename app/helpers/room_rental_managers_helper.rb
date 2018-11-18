@@ -1,0 +1,2 @@
+module RoomRentalManagersHelper
+end

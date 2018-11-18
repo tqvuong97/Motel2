@@ -1,0 +1,62 @@
+<%= form_with(model: paymentmanagement, local: true) do |form| %>
+  <% if paymentmanagement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(paymentmanagement.errors.count, "error") %> prohibited this paymentmanagement from being saved:</h2>
+
+      <ul>
+      <% paymentmanagement.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :dayPM %>
+    <%= form.date_select :dayPM %>
+  </div>
+
+  <div class="field">
+    <%= form.label :guest_id %>
+    <%= form.text_field :guest_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :service_id %>
+    <%= form.text_field :service_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :room_id %>
+    <%= form.select(:room_id, options_for_select(@rooms)) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :electricity %>
+    <%= form.number_field :electricity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :internet %>
+    <%= form.number_field :internet %>
+  </div>
+
+  <div class="field">
+    <%= form.label :water %>
+    <%= form.number_field :water %>
+  </div>
+
+  <div class="field">
+    <%= form.label :roomPrice %>
+    <%= form.number_field :roomPrice %>
+  </div>
+
+  <div class="field">
+    <%= form.label :debt %>
+    <%= form.number_field :debt %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

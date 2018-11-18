@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dayRent: 2018-10-06
+  statusRent: MyString
+  deposit: 1
+  guest: one
+
+two:
+  dayRent: 2018-10-06
+  statusRent: MyString
+  deposit: 1
+  guest: two

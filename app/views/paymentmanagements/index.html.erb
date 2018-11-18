@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Paymentmanagements</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Daypm</th>
+      <th>Guest</th>
+      <th>Service</th>
+      <th>Room</th>
+      <th>Electricity</th>
+      <th>Internet</th>
+      <th>Water</th>
+      <th>Roomprice</th>
+      <th>Debt</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @paymentmanagements.each do |paymentmanagement| %>
+      <tr>
+        <td><%= paymentmanagement.dayPM %></td>
+        <td><%= paymentmanagement.guest %></td>
+        <td><%= paymentmanagement.service %></td>
+        <td><%= paymentmanagement.room %></td>
+        <td><%= paymentmanagement.electricity %></td>
+        <td><%= paymentmanagement.internet %></td>
+        <td><%= paymentmanagement.water %></td>
+        <td><%= paymentmanagement.roomPrice %></td>
+        <td><%= paymentmanagement.debt %></td>
+        <td><%= link_to 'Show', paymentmanagement %></td>
+        <td><%= link_to 'Edit', edit_paymentmanagement_path(paymentmanagement) %></td>
+        <td><%= link_to 'Destroy', paymentmanagement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Paymentmanagement', new_paymentmanagement_path %>

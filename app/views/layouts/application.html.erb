@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Motel</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+         <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+     <link rel="stylesheet" type="text/css" href="/assets/stylesheets/mystyle.css" />
+  </head>
+
+  <body>
+  <nav class="navbar navbar-expand-sm bg-light navbar-light">
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="#"> <%= link_to "Room", rooms_path %> </a>
+    </li>
+    &nbsp;&nbsp;
+    <li class="nav-item">
+      <a class="nav-link" href="#"> <%= link_to "Area", areas_path %> </a>
+    </li>
+    &nbsp;&nbsp;
+    <li class="nav-item">
+     <a class="nav-link" href="#"> <%= link_to "Price List", pricelists_path %> </a>
+    </li>
+    &nbsp;&nbsp;
+
+    <li class="nav-item">
+     <a class="nav-link" href="#"> <%= link_to "Guest", guests_path %> </a>
+    </li>
+    &nbsp;&nbsp;
+
+
+    <li class="nav-item">
+     <a class="nav-link" href="#"> <%= link_to "Device", devices_path %> </a>
+    </li>
+    &nbsp;&nbsp;
+
+
+    <li class="nav-item">
+     <a class="nav-link" href="#"> <%= link_to "Service", services_path %> </a>
+    </li>
+    &nbsp;&nbsp;
+
+
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#">Disabled</a>
+    </li>
+  </ul>
+</nav>
+    <%= yield %>
+  </body>
+</html>

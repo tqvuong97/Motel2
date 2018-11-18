@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Devices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Namedevice</th>
+      <th>Branchdevice</th>
+      <th>Quantity</th>
+      <th>Statusdevice</th>
+      <th>Daypurchase</th>
+      <th>Costdevice</th>
+      <th>Room</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @devices.each do |device| %>
+    <%if device.room_id ==@room.id %>
+      <tr>
+        <td><%= device.nameDevice %></td>
+        <td><%= device.branchDevice %></td>
+        <td><%= device.quantity %></td>
+        <td><%= device.statusDevice %></td>
+        <td><%= device.dayPurchase %></td>
+        <td><%= device.costDevice %></td>
+        <td><%= device.nameRoom %></td>
+        <td><%= link_to 'Show', device %></td>
+        <td><%= link_to 'Edit', edit_device_path(device) %></td>
+        <td><%= link_to 'Destroy', device, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      <%end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Device', new_device_path %>

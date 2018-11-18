@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nameroom:</strong>
+  <%= @room.nameRoom %>
+</p>
+
+<p>
+  <strong>Maxslot:</strong>
+  <%= @room.maxSlot %>
+</p>
+
+<p>
+  <strong>Statusroom:</strong>
+  <%= @room.statusRoom %>
+</p>
+
+<p>
+  <strong>Numofpeople:</strong>
+  <%= @room.numOfPeople %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @room.area %>
+</p>
+
+<%= link_to 'Edit', edit_room_path(@room) %> |
+<%= link_to 'Back', rooms_path %>

@@ -1,0 +1,27 @@
+<%= form_with(model: pricelist, local: true) do |form| %>
+  <% if pricelist.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pricelist.errors.count, "error") %> prohibited this pricelist from being saved:</h2>
+
+      <ul>
+      <% pricelist.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :area_id %>
+    <%= form.select(:area_id, options_for_select(@areas)) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

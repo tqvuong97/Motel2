@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dayPM: 2018-10-06
+  guest: one
+  service: one
+  room: one
+  electricity: 1
+  internet: 1
+  water: 1
+  roomPrice: 1
+  debt: 1
+
+two:
+  dayPM: 2018-10-06
+  guest: two
+  service: two
+  room: two
+  electricity: 1
+  internet: 1
+  water: 1
+  roomPrice: 1
+  debt: 1

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nameService: MyString
+  unit: MyString
+  unitPrice: 1
+
+two:
+  nameService: MyString
+  unit: MyString
+  unitPrice: 1
