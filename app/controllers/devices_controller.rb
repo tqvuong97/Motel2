@@ -17,6 +17,10 @@ class DevicesController < ApplicationController
 
   # GET /devices/new
   def new
+
+    unless params[:room_id].nil?
+      @room = Room.find(params[:room_id])
+    end
     @device = Device.new
     @rooms = Room.all.map { |a| [a.nameRoom, a.id] }
   end

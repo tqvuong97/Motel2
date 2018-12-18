@@ -11,23 +11,31 @@ class RoomsController < ApplicationController
   # GET /rooms/1
   # GET /rooms/1.json
   def show
+
   end
 
   # GET /rooms/new
   def new
-    @room = Room.new
+
     @areas = Area.all.map { |a| [a.nameArea, a.id] }
+
+
+      @room = Room.new
+
+
+
   end
 
   # GET /rooms/1/edit
   def edit
+    @areas = Area.all.map { |a| [a.nameArea, a.id] }
   end
 
   # POST /rooms
   # POST /rooms.json
   def create
     @room = Room.new(room_params)
-
+@room.nameRoom='Phòng ' + @room.nameRoom
     respond_to do |format|
       if @room.save
         format.html { redirect_to @room, notice: 'Room was successfully created.' }
@@ -42,6 +50,7 @@ class RoomsController < ApplicationController
   # PATCH/PUT /rooms/1
   # PATCH/PUT /rooms/1.json
   def update
+
     respond_to do |format|
       if @room.update(room_params)
         format.html { redirect_to @room, notice: 'Room was successfully updated.' }

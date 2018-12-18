@@ -43,7 +43,14 @@
 
   <div class="field">
     <%= form.label :room_id %>
-    <%= form.select(:room_id, options_for_select(@rooms)) %>
+
+    <%if params[:room_id].nil? %>
+    <%= form.hidden_field :room_id,value: @room.id,readonly: "readonly" %>
+    <%=@room.nameRoom %>
+      <%else %>
+      <%= form.select(:room_id,options_for_select(@rooms)) %>
+    <%end %>
+
   </div>
 
   <div class="actions">

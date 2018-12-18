@@ -1,5 +1,47 @@
 <h1>New Room</h1>
 
-<%= render 'form', room: @room %>
+<%#= render 'form', room: @room %>
+<%= form_with(model: @room, local: true) do |form| %>
+  <% if @room.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@room.errors.count, "error") %> prohibited this room from being saved:</h2>
+
+      <ul>
+        <% @room.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nameRoom %>
+    <%= form.text_field :nameRoom %>
+  </div>
+
+  <div class="field">
+    <%= form.label :maxSlot %>
+    <%= form.number_field :maxSlot %>
+  </div>
+
+  <div class="field">
+    <%= form.label :statusRoom %>
+    <%= form.text_field :statusRoom %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numOfPeople %>
+    <%= form.number_field :numOfPeople %>
+  </div>
+
+  <div class="field">
+    <%= form.label :area_id %>
+    <%= form.select(:area_id, options_for_select(@areas)) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
 
 <%= link_to 'Back', rooms_path %>
